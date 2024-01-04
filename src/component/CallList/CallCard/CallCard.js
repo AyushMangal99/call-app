@@ -26,19 +26,19 @@ function CallCard(props) {
   }
 
   var call_list1 = []
-  props.archive_type == 0 ? props.unArchived.inOrderTraversal((node) => call_list1.push(node.data)) : props.Archived.inOrderTraversal((node) => call_list1.push(node.data));
+  props.archive_type === 0 ? props.unArchived.inOrderTraversal((node) => call_list1.push(node.data)) : props.Archived.inOrderTraversal((node) => call_list1.push(node.data));
 
   useEffect(() => {
     call_list1 = []
-    props.archive_type == 0 ? props.unArchived.inOrderTraversal((node) => call_list1.push(node.data)) : props.Archived.inOrderTraversal((node) => call_list1.push(node.data));
+    props.archive_type === 0 ? props.unArchived.inOrderTraversal((node) => call_list1.push(node.data)) : props.Archived.inOrderTraversal((node) => call_list1.push(node.data));
     setArrowType(0)
-  }, [arrowType])
+  }, [props.archive_type, props.Archived, props.unArchived, arrowType])
 
 
   function contact_list() {
     let result = []
-    if (call_list1.length == 0) {
-      props.archive_type == 1 ? result.push(<div key={1} style={{ textAlign: 'center', marginTop: '50%', fontSize: '400%', fontWeight: '700', color: 'blue' }}><IoMdArchive /></div>) : result.push(<div key={1} style={{ textAlign: 'center', marginTop: '50%', fontSize: '200%', fontWeight: '700', color: 'red' }}>No logs </div>)
+    if (call_list1.length === 0) {
+      props.archive_type === 1 ? result.push(<div key={1} style={{ textAlign: 'center', marginTop: '50%', fontSize: '400%', fontWeight: '700', color: 'blue' }}><IoMdArchive /></div>) : result.push(<div key={1} style={{ textAlign: 'center', marginTop: '50%', fontSize: '200%', fontWeight: '700', color: 'red' }}>No logs </div>)
       return result
 
     }
@@ -47,13 +47,13 @@ function CallCard(props) {
         <div key={i.time}>
           <p className='call-date'>..............................    July, 21 2017   ............................</p>
           <div className='phone-number' style={{ position: 'relative' }} >
-            <div><IoMdCall size="65%" /><span>{i.type == 0 ? <FaArrowUp size='25%' color='green' /> : <FaArrowDown size='25%' color='red' />}</span></div>
+            <div><IoMdCall size="65%" /><span>{i.type === 0 ? <FaArrowUp size='25%' color='green' /> : <FaArrowDown size='25%' color='red' />}</span></div>
             <div>
               <p>{i.phone_number}</p>
               <p>{i.description}</p>
             </div>
             <div>{i.time} <span>{i.time_type}</span></div>
-            <button className='archive-button' onClick={props.archive_type == 0 ? archiveFunc : unarchiveFunc} id={i.time}><IoArchive size="13px" color='orange' id={i.time} /></button>
+            <button className='archive-button' onClick={props.archive_type === 0 ? archiveFunc : unarchiveFunc} id={i.time}><IoArchive size="13px" color='orange' id={i.time} /></button>
           </div>
         </div>
       )

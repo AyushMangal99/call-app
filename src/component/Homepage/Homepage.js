@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { PiArchiveThin } from "react-icons/pi";
-// import { Link } from 'react-router-dom'
 import CallList from '../CallList/CallList';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
@@ -185,7 +184,7 @@ class AVLTree {
       if (!root.left || !root.right) {
         deletedNode = { ...root }; // Create a copy of the deleted node
         const temp = root.left || root.right || null;
-        root = null;
+        root = temp;
         return { root, deletedNode };
       }
 
