@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { PiArchiveThin } from "react-icons/pi";
+// import { Link } from 'react-router-dom'
 import CallList from '../CallList/CallList';
 import Footer from '../Footer/Footer';
 import Navbar from '../Navbar/Navbar';
@@ -183,7 +184,7 @@ class AVLTree {
       // Node with only one child or no child
       if (!root.left || !root.right) {
         deletedNode = { ...root }; // Create a copy of the deleted node
-        // const temp = root.left || root.right || null;
+        const temp = root.left || root.right || null;
         root = null;
         return { root, deletedNode };
       }
@@ -239,7 +240,7 @@ let unArchived = new AVLTree();
 let Archived = new AVLTree();
 
 for (let i of call_list) {
-  unArchived.insert(i.time+String(Math.random()*100), i);
+  unArchived.insert(i.time, i);
 }
 
 function Homepage() {
