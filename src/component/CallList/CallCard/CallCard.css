@@ -1,0 +1,70 @@
+.call-card .phone-number {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  /* border: solid 1px; */
+  border-radius: 10px;
+  padding: 2%;
+  margin-bottom: 5%;
+  background-color: white;
+}
+
+.call-date{
+  font-size: 80%;
+  text-align: center;
+}
+
+.call-card .phone-number div:nth-child(1) {
+  position: relative;
+  width: 20%;
+  margin: auto;
+}
+
+.call-card .phone-number div:nth-child(2) {
+  width: 55%;
+}
+
+.call-card .phone-number div:nth-child(3) {
+  width: 25%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 80%;
+}
+
+.call-card .phone-number div:nth-child(1) span {
+  position: absolute;
+  top: 0px;
+  left: 35%;
+}
+
+.call-card .phone-number div:nth-child(2) p{
+  margin: 0;
+  font-size: 84%;
+}
+.call-card .phone-number div:nth-child(2) p:nth-child(1){
+  font-weight: 500;
+  font-size: 100%;
+}
+.call-card .phone-number div:nth-child(2) p:nth-child(2){
+  font-size: 80%;
+}
+.call-card .phone-number div:nth-child(3) span{
+  font-size: 60%;
+  border: solid 1px;
+  font-weight: 700;
+  padding: 0 1px;
+}
+
+.archive-button{
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.archive-button:hover{
+  cursor: pointer;
+}

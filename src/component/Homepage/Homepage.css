@@ -1,0 +1,52 @@
+.homepage{
+  margin: auto;
+  width: 300px;
+  height:550px;
+  border: solid black 1px;
+  background-color: whitesmoke;
+}
+
+.homepage .homepage-navbar{
+  height: 7%;
+  /* border: solid 1px; */
+}
+.homepage .archive{
+  border: solid 1px;
+  width: 90%;
+  margin: auto;
+  border-radius: 0 0 10px 10px;
+  height:8%;
+  background-color: white;
+}
+
+.homepage .archive button{
+  border: none;
+  background-color: transparent;
+  margin: 0px 15px;
+  display: flex;  
+  align-items: center;
+  width: 80%;
+}
+.homepage .archive button:hover{
+  cursor: pointer;
+}
+
+.homepage .archive button p{
+  margin-left: 1%;
+  font-size: 14px;
+  display: inline;
+}
+
+.homepage .call-list{
+  height: 75%;
+  /* border: solid 1px; */
+  overflow: scroll;
+}
+.homepage .footer1{
+  height: 10%;
+  display: flex;
+}
+
+.homepage .call-list::-webkit-scrollbar{
+  display: none;
+}

@@ -1,0 +1,42 @@
+.navbar-navbar ul{
+  list-style: none;
+  margin: 0;
+  display: flex; 
+  padding: 0;
+  justify-content: space-around;
+
+}
+
+.navbar-navbar ul li:nth-child(1){
+  width: 50%;
+  background-color: white;
+}
+.navbar-navbar ul li:nth-child(1) p{
+  margin: 0;
+  margin-left: 10px;
+}
+.navbar-navbar ul .Activity{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.navbar-navbar ul li:nth-child(2){
+  text-align: center;
+  width: 25%;
+  margin: auto;
+}
+.navbar-navbar ul li:nth-child(3){
+  text-align: center;
+  margin: auto;
+  width: 25%;
+}
+
+.navbar-navbar .Activity{
+  text-decoration: none;
+  color: black;
+}
+
+.archive-btn:hover{
+  cursor: pointer;
+}

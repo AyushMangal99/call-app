@@ -1,0 +1,70 @@
+.footer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.footer .footer-cont-1,
+.footer-cont-3 {
+  /* border: solid 1px; */
+  /* height: 100%; */
+  width: 35%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer .footer-cont-2 {
+  /* border: solid 1px; */
+  width: 30%;
+  text-align: center;
+}
+
+.footer .phone,
+.contact,
+.Setting,
+.Dot {
+  width: 50%;
+  background-color: transparent;
+  border: none;
+}
+
+.footer .footer-cont-2 {
+  position: relative;
+}
+
+.footer .footer-cont-2 button {
+  width: 75%;
+  height: 125%;
+  border: solid white 3px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(8, 248, 8);
+  z-index: 10;
+}
+
+.footer .phone:hover,
+.contact:hover,
+.Setting:hover,
+.Dot:hover,
+.footer-cont-2 button:hover {
+  cursor: pointer;
+}
+
+.footer .phone{
+  position: relative;
+}
+
+.footer .phone p{
+  position: absolute;
+  right: 0px;
+  top: -5px;
+  font-size: 11px;
+  background-color: red;
+  color: white;
+  padding: 1px 7px;
+  border-radius: 10px;
+}
